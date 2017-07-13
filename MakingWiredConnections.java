@@ -125,7 +125,7 @@ public class MakingWiredConnections{
 	}
 
 	/**
-    * pathExists recursive method to find path between source and destination
+    * BFS to find distance of all vertices.
     * @param source start node
     * @return true or false
     */ 
