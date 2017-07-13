@@ -177,7 +177,7 @@ public class MakingWiredConnections{
 		printGraph(graph);
 		System.out.println("-----------------------------------");
 		
-		//Find whether path exists from A to F.
+		//Find whether partition exists.
 		System.out.println("Partition exists "+canPartition(graph));
 
 	}
