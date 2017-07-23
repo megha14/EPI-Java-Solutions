@@ -109,7 +109,9 @@ public class MakingWiredConnections{
 	}
 
     /**
-    * Helper method to check for each vertex of graph whether we can divide the graph into two sets such that each vertex in left halves is connected to 
+    * Helper method to check for each vertex of graph 
+    * whether we can divide the graph into two sets such 
+    * that each vertex in left halves is connected to 
     * each vertex in right halves
     * @param HashMap<String, Node> graph 
     * @return true or false
@@ -170,7 +172,7 @@ public class MakingWiredConnections{
 		String[] input = {"AB", "BC", "CD", "AH", "BI", "HI", "ID", "DE", "HG", "GF", "IF", "FE"};
 		String[] input1 = {"AB", "AC", "BC", "CD", "AH", "BI", "HI", "ID", "DE", "HG", "GF", "IF", "FE"};
 
-		//Create Graph
+		//Create Graph. Change to input2 to see the results for that graph
 		HashMap<String, Node> graph = createGraph(input1);
 
 		//Print Graph
