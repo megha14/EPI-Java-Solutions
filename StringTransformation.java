@@ -1,6 +1,7 @@
 /**  
-* StringTransformation --- Given a dictionary D and two strings s and t, determine if s produces t. Assume that all characters are lowercase alphabets.
-*							If s produces t, output the length of the shortest production sequence, otherwise output -1.
+* StringTransformation --- Given a dictionary D and two strings s and t, determine if s produces t. 
+* Assume that all characters are lowercase alphabets. If s produces t, output the length of the 
+* shortest production sequence, otherwise output -1.
 * @author Megha Rastogi
 */
 
@@ -8,7 +9,7 @@ import java.util.*;
 public class StringTransformation{
 
 	/**
-	* Node --- class to store each vertex along with its adjacent vertices
+	* Node --- class to store each vertex id and distance
 	*/
 	static class Node{		
 		
@@ -36,21 +37,23 @@ public class StringTransformation{
 		}
 
 		//To print Node 
-        public String toString(){
-     		String msg = "id : " + id +"\n";
-        	msg+= "distance = "+distance+"\n";
-        	return msg;
-        }
+        	public String toString(){
+			String msg = "id : " + id +"\n";
+			msg+= "distance = "+distance+"\n";
+			return msg;
+        	}
 	}
 
-	/**
-    * transformDistance method
-    * @param source start node
-    * @param destination end node
-    * @return true or false
+    /**
+    * transformDistance method to find number of steps it takes to transform string a to b.
+    * @param HashSet input dictionary
+    * @param source string
+    * @param destination string
+    * @return number of steps integer
     */ 
 	public static int transformDistance(HashSet<String> d, String source, String destination){
 	
+		//visited hashset to store the visited strings
 		HashSet<String> visited = new HashSet<String>();
 		Queue<Node> q = new LinkedList<Node>();
 
@@ -60,7 +63,6 @@ public class StringTransformation{
 		Node parent;
 		while((parent = q.poll()) != null){
 		
-			//System.out.println(parent.getId());
 			if(parent.getId().equals(destination))
 				return parent.getDistance();
 
