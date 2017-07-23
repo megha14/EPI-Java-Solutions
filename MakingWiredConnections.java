@@ -9,7 +9,7 @@ import java.util.*;
 public class MakingWiredConnections{
 
 	/**
-	* Node --- class to store each vertex along with its adjacent vertices
+	* Node --- class to store each vertex along with its adjacent vertices and distance
 	*/
 	static class Node{		
 		
@@ -28,7 +28,7 @@ public class MakingWiredConnections{
 			return id;
 		}
 		
-		//Getter method for end vertex
+		//Getter method for adajcent list
 		public LinkedList<Node> getAdjacent(){
 			return adjacent;
 		}
@@ -49,16 +49,16 @@ public class MakingWiredConnections{
 		}
 
 		//To print Node 
-        public String toString(){
-     		String msg = id + " : ";
-        	for(Node node: adjacent)
-        		msg = msg + node.id + " ";
-        	msg+= "distance = "+distance;
-        	return msg;
-        }
+        	public String toString(){
+			String msg = id + " : ";
+			for(Node node: adjacent)
+				msg = msg + node.id + " ";
+			msg+= "distance = "+distance;
+			return msg;
+        	}
 	}
 
-	/**
+    /**
     * Create and get node corresponding to a vertex.
     * @param HashMap<String, Node> graph 
     * @param id 
@@ -72,7 +72,7 @@ public class MakingWiredConnections{
         	graph.put(id, node);
         	return node;
         }
-	}
+    }
 
     /**
     * Adds edge between sorce and destination.
@@ -92,7 +92,7 @@ public class MakingWiredConnections{
 		d.addAdjacent(s);
 	}
 
-	/**
+    /**
     * Creates a HashMap with string key and Node value
     * @param input list of edges
     * @return HashMap<String,Node>
@@ -108,7 +108,7 @@ public class MakingWiredConnections{
 		return graph;
 	}
 
-	/**
+    /**
     * Helper method to check for each vertex of graph whether we can divide the graph into two sets such that each vertex in left halves is connected to 
     * each vertex in right halves
     * @param HashMap<String, Node> graph 
@@ -124,8 +124,8 @@ public class MakingWiredConnections{
 		return true;
 	}
 
-	/**
-    * BFS to find distance of all vertices.
+    /**
+    * BFS to find distance of all vertices from given node.
     * @param source start node
     * @return true or false
     */ 
@@ -147,7 +147,7 @@ public class MakingWiredConnections{
 		return true;
 	}
 
-	/**
+    /**
     * Print HashMap
     * @param HashMap<String, Node> graph 
     * @return no return value
