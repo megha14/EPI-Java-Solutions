@@ -1,7 +1,7 @@
 /**  
-* MakingWiredConnections --- Program that takes a set of pins and a set of wires connecting pins and determines if it is possible to place some pins 
-*							on the left half of the PCB, and the remainder on the right half of the PCB, such that each wire is between the left halves 
-*							and the right halves.
+* MakingWiredConnections --- Program that takes a set of pins and a set of wires connecting pins and determines 
+* if it is possible to place some pins on the left half of the PCB, and the remainder on the right half of the PCB, 
+* such that each wire is between the left halves and the right halves.
 * @author Megha Rastogi
 */
 
