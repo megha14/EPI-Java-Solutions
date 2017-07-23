@@ -5,7 +5,7 @@
 
 public class SwapBits{
 
-	/**
+    /**
     * swap bits at ith position and jth position 
     * @param number
     * @param ith position
@@ -20,14 +20,15 @@ public class SwapBits{
 		return number;
 	}
 	
-	/**
+    /**
     * Main Method
     * @param arg A string array containing 
     * the command line arguments.
     * @return No return value.
     */ 
 	public static void main(String args[]){
-
+		
+		//Swap the 1th and 6th bit of 73
 		System.out.println(swapBits(73, 1, 6));
 	}
 }
