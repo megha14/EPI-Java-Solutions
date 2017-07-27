@@ -7,9 +7,9 @@
 
 public class DutchNationalFlagTwoPass{
 
-	/**
+    /**
     * Rrrange the elements in such a way that elements less than A[i] appear first 
-	* followed by elements greater than A[i].
+    * followed by elements greater than A[i].
     * @param array 
     * @param pivot
     * @return No return value.
@@ -18,7 +18,6 @@ public class DutchNationalFlagTwoPass{
 		for(int i = 0; i < array.length; i++){
 			for(int j = i+1; j < array.length; j++){
 				if(array[j]<array[pivot]){
-					System.out.println(i+" "+j);
 					swap(array, i, j);
 					break;
 				}
@@ -28,7 +27,6 @@ public class DutchNationalFlagTwoPass{
 		for(int i = array.length-1; i >= 0 && array[i] >= array[pivot]; i--){
 			for(int j = i - 1; j >= 0 && array[j] >= array[pivot]; j--){
 				if(array[j]>array[pivot]){
-					System.out.println(i+" "+j);
 					swap(array, i, j);
 					break;
 				}
@@ -36,7 +34,7 @@ public class DutchNationalFlagTwoPass{
 		}
 	}
 
-	/**
+    /**
     * Swap element at ith position with the element at jth position in an array
     * @param array 
     * @param index i
@@ -49,7 +47,7 @@ public class DutchNationalFlagTwoPass{
 		array[j] = temp;
 	}
 	
-	/**
+    /**
     * Main Method
     * @param arg A string array containing 
     * the command line arguments.
