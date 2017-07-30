@@ -24,6 +24,20 @@ public class RemoveKeyArray{
 	}
 	
 	/**
+    * Remove all occurences of key from an array. [Book Method]
+    * @param array input
+    * @return remaining elements after deletion
+    */ 
+	public static int removeKey1(ArrayList<Integer> input, int key){
+		int writeIndex = 1;
+		for(int i = 1; i < input.size(); ++i){
+			if(input.get(i) != key)
+				input.set(writeIndex++, input.get(i));
+		}
+		return writeIndex;
+	}
+
+	/**
     * Main Method
     * @param arg A string array containing 
     * the command line arguments.
@@ -33,6 +47,9 @@ public class RemoveKeyArray{
 
 		Integer[] input = {1, 2, 2, 2, 2, 5, 5, 6, 6, 6, 7, 8, 9, 9};
 		System.out.println("Elements remaining after deleting 2 : "+removeKey(new ArrayList<Integer>(Arrays.asList(input)), 2));
+
+		//Book Method
+		System.out.println("Elements remaining after deleting 2 : "+removeKey1(new ArrayList<Integer>(Arrays.asList(input)), 2));
 		
 	}
 }
