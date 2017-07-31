@@ -59,10 +59,10 @@ public class RemoveIntegersMTimes{
 	public static void main(String args[]){
 
 		Integer[] input = {1, 2, 2, 2, 2, 5, 5, 6, 6, 6, 7, 8, 9, 9};
-		System.out.println("Elements remaining after deleting 2 : "+updateArray(new ArrayList<Integer>(Arrays.asList(input)), 2).toString());
+		System.out.println("Elements remaining after deleting : "+updateArray(new ArrayList<Integer>(Arrays.asList(input)), 2).toString());
 
 		//Book Method
-		System.out.println("Elements remaining after deleting 2 : "+removeKey1(new ArrayList<Integer>(Arrays.asList(input)), 1));
+		System.out.println("Elements remaining after deleting : "+removeKey1(new ArrayList<Integer>(Arrays.asList(input)), 2));
 		
 	}
 }
