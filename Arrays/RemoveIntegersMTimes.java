@@ -11,7 +11,7 @@ public class RemoveIntegersMTimes{
     * Remove all occurences of key from an array
     * @param array input
     * @param key to be removed
-    * @return number of remaining element
+    * @return array of remaining element
     */ 
 	public static List<Integer> updateArray(ArrayList<Integer> input, int key){
 		int i = 0, count = 0;
