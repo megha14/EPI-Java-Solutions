@@ -1,5 +1,5 @@
 /**  
-* BuySellOnce --- Given sorted array denoting the daily stock price, return the maximum profit
+* BuySellOnce --- Given array denoting the daily stock price, return the maximum profit
 * that could be made by buying and selling one share of that stock 
 * @author Megha Rastogi
 */
@@ -14,7 +14,7 @@ public class BuySellOnce{
     */ 
 	public static int maximumProfit(int[] input){
 		int minimum = Integer.MAX_VALUE, profit = 0;
-		for(int i = 1; i < input.length; i++){
+		for(int i = 0; i < input.length; i++){
 			profit = Math.max(profit, input[i] - minimum);
 			minimum = Math.min(minimum, input[i]);
 		}
@@ -30,7 +30,7 @@ public class BuySellOnce{
 	public static void main(String args[]){
 
 		int[] input = {310, 315, 275, 295, 260, 270, 290, 230, 255, 250};
-		System.out.println("Maximum profi : "+maximumProfit(input));
+		System.out.println("Maximum profit : "+maximumProfit(input));
 		
 	}
 }
