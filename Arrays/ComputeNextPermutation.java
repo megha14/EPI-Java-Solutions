@@ -21,8 +21,10 @@ public class ComputeNextPermutation{
 			return Collections.emptyList();
 
 		for(int i = input.size() - 1; i > changeIndex; i--){
-			if(input.get(i) > input.get(changeIndex))
+			if(input.get(i) > input.get(changeIndex)){
 				Collections.swap(input, changeIndex, i);
+				break;
+			}
 		}
 
 		Collections.reverse(input.subList(changeIndex+1, input.size()));
@@ -38,7 +40,7 @@ public class ComputeNextPermutation{
     */ 
 	public static void main(String args[]){
 
-		Integer[] input = {7, 9, 5, 0, 1, 4, 3, 2};
+		Integer[] input = {1, 2, 4, 3};
 		System.out.println(nextPermutation(Arrays.asList(input)).toString());
 		System.out.println();
 	}
