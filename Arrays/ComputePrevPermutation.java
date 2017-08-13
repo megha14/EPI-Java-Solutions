@@ -17,12 +17,15 @@ public class ComputePrevPermutation{
 		while(changeIndex >= 0 && input.get(changeIndex) <= input.get(changeIndex+1))
 			changeIndex--;
 
+
 		if(changeIndex == -1)
 			return Collections.emptyList();
 
 		for(int i = input.size() - 1; i > changeIndex; i--){
-			if(input.get(i) < input.get(changeIndex))
+			if(input.get(i) < input.get(changeIndex)){
 				Collections.swap(input, changeIndex, i);
+				break;
+			}
 		}
 
 		Collections.reverse(input.subList(changeIndex+1, input.size()));
@@ -38,7 +41,7 @@ public class ComputePrevPermutation{
     */ 
 	public static void main(String args[]){
 
-		Integer[] input = {1, 2, 3, 9, 6, 7, 8};
+		Integer[] input = {1, 2, 4, 3};
 		System.out.println(prevPermutation(Arrays.asList(input)).toString());
 		System.out.println();
 	}
